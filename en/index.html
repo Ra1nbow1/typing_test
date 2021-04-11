@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romanov &mdash; Typing test</title>
+    <link rel="stylesheet" href="/hosting.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/barcode.ico" type="image/x-icon">
+</head>
+<body>
+    
+    <script src="script.js" async></script>
+
+    
+    <div class="scroll-bar" id="wrapper">
+    <div id="type-screen">
+        <div id="title">
+            <h1>Тест скорости печати <a style="color: #fff; font-size: 18px; border: 1px solid #fff; text-decoration: none; padding: 3px;" href="../ru/index.html">Изменить язык</a></h1>
+        </div>
+        <div id="top-bar">
+            <div id="time-box">
+                <div id="time">
+                    <div class="icon fa fa-clock-o"></div>
+                    <div id="time-value">1:00</div>
+                </div>
+            </div>
+            <div id="speed-box">
+                <div id="speed">
+                    <div id="wpm">
+                        <div class="val">0</div>
+                    </div>
+                    <div class="label">WPM</div>
+                    <div id="average">0 AVG</div>
+                </div>
+            </div>
+        </div>
+        <div id="prompt">
+            <div id="prompt-number">
+                <h1 id="prompt-number-value">1</h1>
+            </div>
+            <div id="prompt-letters"></div>
+            <div id="prompt-cursor">
+                <div id="prompt-cursor-trail"></div>
+            </div>
+        </div>
+        <div id="author"></div>
+        <div id="input-field">
+            <div id="input-field-letters"></div>
+        </div>
+        <div id="bottom-bar">
+            <div class="button" id="reset">
+                <h1>Обновить</h1>
+            </div>
+            <div id="nav-buttons">
+                <div class="button disabled" id="prev">
+                    <h1>Назад</h1>
+                </div>
+                <div class="button" id="next">
+                    <h1>Далее</h1>
+                </div>
+            </div>
+        </div>
+        <div id="history">
+            <div class="title">
+                <h1>Последние</h1>
+            </div>
+            <div class="labels">
+                <div class="label l1">#</div>
+                <div class="label l2">Номер текста</div>
+                <div class="label l3">WPM</div>
+            </div>
+            <div id="history-items"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- подключаем jquery -->
+
+
+<script>
+    
+    jQuery(document).ready(function($) {
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                $('body').text('Тест скорости печати не поддерживается на мобильных устройствах');
+                $('body').css('margin','35vh auto')
+                $('body').css('text-align','center')
+        }
+    });
+
+</script>
+
+</body>
+</html>
